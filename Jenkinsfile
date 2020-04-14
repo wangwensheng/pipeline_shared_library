@@ -1,16 +1,5 @@
 pipeline {
     agent any
-   3dd environment {
-        remote_dir = "/opt/hello"
-    }
-                branchFilterType: 'All',
-pipeline {
-    agent any
-    triggers{
-        github( triggerOnPush: true,
-                triggerOnMergeRequest: true,
-                branchFilterType: 'All')
-    }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
         disableConcurrentBuilds()
