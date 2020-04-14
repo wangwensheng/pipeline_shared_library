@@ -1,10 +1,5 @@
 pipeline {
     agent any
-    triggers{
-        github( triggerOnPush: true,
-                triggerOnMergeRequest: true,
-                branchFilterType: 'All')
-    }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
         disableConcurrentBuilds()
