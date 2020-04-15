@@ -9,9 +9,9 @@ def call(int buildNumber) {
           /*}
         }
       }
-    }
+    }*/
   } else {
-    pipeline {
+    /*pipeline {
       agent any
       stages {
         stage('Odd Stage') {
